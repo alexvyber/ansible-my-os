@@ -1,8 +1,9 @@
-- name: global email
+
+- name: global name
   git_config:
-    name: user.email
+    name: user.name
     scope: global
-    value: "alexvyber@gmail.com"
+    value: "Alex Vyber"
   tags:
   - git
 

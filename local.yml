@@ -2,12 +2,22 @@
   pre_tasks:
   - name: Update dnf
     dnf:
-      update_cache: true
+      update_cache: false
       state: present
     tags:
       - install
       - core
   tasks:
-    - include: tasks/core.yml
-    - include: tasks/git.yml
-    - include: tasks/zsh.yml
+    - name: zsh 
+      include: tasks/zsh.yml
+    - name: tools 
+      include: tasks/tools.yml
+    - name: utils 
+      include: tasks/utils.yml
+    - name: Git 
+      include: tasks/git.yml
+      #  TODO tasks/dotfiles.yml
+      #  TODO tasks/nvim.yml
+      #  TODO tasks/personal.yml
+      #  TODO tasks/ssh.yml
+      #  TODO tasks/brave.yml
